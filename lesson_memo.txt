@@ -1,0 +1,41 @@
+$ ls -a
+隠しファイルも含めて確認
+
+$ git init
+リポジトリの新規作成
+
+$ ls .git/
+作成された .git ディレクトリの中身を見る
+  HEAD
+  config        設定ファイル
+  hooks
+  objects       リポジトリ本体
+  branches
+  description
+  info
+  refs
+
+$ git clone <リポジトリ名>
+ファイルとリポジトリの両方がコピーされる
+  例えばAtomのファイル・リポジトリこクローンしたい場合は、GitHub上でatomなどと検索し、
+  atomのリポジトリに入った後、緑のClone or downloadをクリックしてURLをコピーし、
+  $ git clone https://github.com/atom/atom.git
+  とする。
+
+変更をステージに追加する
+  $ git add <ファイル名>
+  $ git add <ディレクトリ名>
+  $ git add .
+
+ステージに追加された変更をリポジトリに記録する
+  $ git commit
+  $ git commit -m "<メッセージ名>"
+  エディタを立ち上げずにメッセージ付きで記録できる
+  $ git commit -v
+  変更内容も確認できる（オプションなしだと変更したファイル名のみ確認できる）
+
+  コミットメッセージは
+    １行目：変更内容の要約
+    ２行目：空行
+    ３行目：変更した理由
+  のように書くと良い（完結にかける時は１行に全て書くのもあり）
