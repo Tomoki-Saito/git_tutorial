@@ -199,3 +199,12 @@ $ git push origin feacher
     ・複数人で同じファイルを変更せず、分担する
     ・pull や merge する前に変更中の状態をなくしておく（commit や stash で）
     ・pull するときは pull するブランチに移動してから pull する
+
+ブランチ名を変更する
+  $ git branch -m <新ブランチ名>
+
+ブランチを削除する
+  $ git branch -d <ブランチ名>
+  master にマージされていない変更が残っている場合は変更しない
+  $ git branch -D <ブランチ名>
+  強制削除
